@@ -1,7 +1,6 @@
 package huntingTraps.common;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public final class CreativeTabHuntingTraps extends CreativeTabs
@@ -14,7 +13,7 @@ public final class CreativeTabHuntingTraps extends CreativeTabs
         //sets the image for the creative tab
         @Override
         public ItemStack getIconItemStack() {
-            return new ItemStack(Item.eyeOfEnder);
+            return new ItemStack(HuntingTraps.Pitfall);
         }
    
         //sets the title/name for the creative tab

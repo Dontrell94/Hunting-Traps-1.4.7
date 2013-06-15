@@ -7,7 +7,7 @@ public class HuntingTrapsClientProxy extends huntingTraps.common.HuntingtrapsCom
 	@Override
 	public void registerRenders()
 	{
-		MinecraftForgeClient.preloadTexture("/resources/huntingTraps/textures/hnttrp.png");
+		MinecraftForgeClient.preloadTexture("/huntingTraps/textures/hnttrp.png");
 		// RenderingRegistry.registerEntityRenderingHandler(entityClass, renderer);
 		// registerBlockHandler
 	}

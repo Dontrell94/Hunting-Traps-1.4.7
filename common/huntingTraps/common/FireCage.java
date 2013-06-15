@@ -15,9 +15,9 @@ public class FireCage extends Block
 	}
 	
 	public String getTextureFile()
-	{
-		return "/huntingTraps/textures/hnttrp.png";
-	}
+    {
+            return "/huntingTraps/textures/hnttrp.png";
+    }
 	
 	@Override
 	public int getBlockTextureFromSide(int side)

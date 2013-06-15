@@ -1,5 +1,7 @@
 package huntingTraps.common;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -15,15 +17,24 @@ public class Spikes extends Block
 	}
 	
 	public String getTextureFile()
-	{
-		return "/huntingTraps/textures/hnttrp.png";
-	}
+    {
+            return "/huntingTraps/textures/hnttrp.png";
+    }
 	
 	@Override
 	public int getBlockTextureFromSide(int j)
 	{
-		return 14;
+		return 13;
 	}
+
+    @SideOnly(Side.CLIENT)
+    /**
+     * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
+     */
+    public int getRenderBlockPass()
+    {
+        return 1;
+    }
 	
 	public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
 	{

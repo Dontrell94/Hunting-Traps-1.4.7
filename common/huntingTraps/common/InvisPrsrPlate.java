@@ -4,6 +4,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.EnumMobType;
@@ -17,7 +20,7 @@ import net.minecraft.world.World;
 
 public class InvisPrsrPlate extends Block
 {
-	/** The mob type that can trigger this pressure plate. */
+        /** The mob type that can trigger this pressure plate. */
     private EnumMobType triggerMobType;
 
     protected InvisPrsrPlate(int par1, int j, EnumMobType par3EnumMobType)
@@ -29,14 +32,23 @@ public class InvisPrsrPlate extends Block
     }
     
     public String getTextureFile()
-	{
-		return "/huntingTraps/textures/hnttrp.png";
-	}
+    {
+            return "/huntingTraps/textures/hnttrp.png";
+    }
     
     @Override
     public int getBlockTextureFromSide(int j)
     {
-    	return 9;
+        return 9;
+    }
+
+    @SideOnly(Side.CLIENT)
+    /**
+     * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
+     */
+    public int getRenderBlockPass()
+    {
+        return 1;
     }
 
     /**
@@ -138,7 +150,7 @@ public class InvisPrsrPlate extends Block
      * Checks if there are mobs on the plate. If a mob is on the plate and it is off, it turns it on, and vice versa.
      */
     @SuppressWarnings("rawtypes")
-	private void setStateIfMobInteractsWithPlate(World par1World, int par2, int par3, int par4)
+        private void setStateIfMobInteractsWithPlate(World par1World, int par2, int par3, int par4)
     {
         boolean var5 = par1World.getBlockMetadata(par2, par3, par4) == 1;
         boolean var6 = false;

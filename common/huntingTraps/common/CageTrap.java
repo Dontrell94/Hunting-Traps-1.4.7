@@ -20,9 +20,9 @@ public class CageTrap extends Block
 	}
 	
 	public String getTextureFile()
-	{
-		return "/huntingTraps/textures/hnttrp.png";
-	}
+    {
+            return "/huntingTraps/textures/hnttrp.png";
+    }
 	
 	@Override
 	public int getBlockTextureFromSide(int side)
@@ -76,14 +76,22 @@ public class CageTrap extends Block
              	}
      		else
     		{
-    			world.setBlockWithNotify(i, j + 1, k - 1, 0);
-    			world.setBlockWithNotify(i, j + 2, k - 1, 0);
-    			world.setBlockWithNotify(i, j + 1, k + 1, 0);
-    			world.setBlockWithNotify(i, j + 2, k + 1, 0);
-    			world.setBlockWithNotify(i + 1, j + 1, k, 0);
-    			world.setBlockWithNotify(i + 1, j + 2, k, 0);
-    			world.setBlockWithNotify(i - 1, j + 1, k, 0);
-    			world.setBlockWithNotify(i - 1, j + 2, k, 0);
+     		   world.setBlockWithNotify(i, j + 1, k - 1, 0);
+               world.setBlockWithNotify(i, j + 2, k - 1, 0);
+               world.setBlockWithNotify(i, j + 1, k + 1, 0);
+               world.setBlockWithNotify(i, j + 2, k + 1, 0);
+               world.setBlockWithNotify(i + 1, j + 1, k, 0);
+               world.setBlockWithNotify(i + 1, j + 2, k, 0);
+               world.setBlockWithNotify(i - 1, j + 1, k, 0);
+               world.setBlockWithNotify(i - 1, j + 2, k, 0);
+               world.setBlockWithNotify(i + 1, j + 1, k - 1, 0);
+               world.setBlockWithNotify(i + 1, j + 2, k - 1, 0);
+               world.setBlockWithNotify(i - 1, j + 1, k - 1, 0);
+               world.setBlockWithNotify(i - 1, j + 2, k - 1, 0);
+               world.setBlockWithNotify(i - 1, j + 1, k + 1, 0);
+               world.setBlockWithNotify(i - 1, j + 2, k + 1, 0);
+               world.setBlockWithNotify(i + 1, j + 1, k + 1, 0);
+               world.setBlockWithNotify(i + 1, j + 2, k + 1, 0);
     		}
             
      }

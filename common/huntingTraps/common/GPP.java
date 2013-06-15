@@ -176,7 +176,7 @@ public class GPP extends Block
      * Checks if there are mobs on the plate. If a mob is on the plate and it is off, it turns it on, and vice versa.
      */
     @SuppressWarnings("rawtypes")
-	private void setStateIfMobInteractsWithPlate(World par1World, int par2, int par3, int par4)
+        private void setStateIfMobInteractsWithPlate(World par1World, int par2, int par3, int par4)
     {
         boolean var5 = par1World.getBlockMetadata(par2, par3, par4) == 1;
         boolean var6 = false;
